@@ -119,13 +119,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BinaryNode.cpp" />
+    <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="CrossedCube.cpp" />
     <ClCompile Include="Hypercube.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AGraph.h" />
+    <ClInclude Include="Core\AGraph.h" />
     <ClInclude Include="ANode.h" />
     <ClInclude Include="BinaryNode.h" />
+    <ClInclude Include="CrossedCube.h" />
+    <ClInclude Include="Debug.h" />
     <ClInclude Include="Hypercube.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

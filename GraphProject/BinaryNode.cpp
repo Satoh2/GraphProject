@@ -15,3 +15,15 @@ int BinaryNode::GetBit(int index)
 {
 	return (ID >> index) & 1;
 }
+
+void BinaryNode::SetBit(int value, int index)
+{
+	if (value == 0)
+	{
+		ID &= ~0 - (1 << index);
+	}
+	else
+	{
+		ID |= 1 << index;
+	}
+}

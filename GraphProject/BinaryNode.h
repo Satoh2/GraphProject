@@ -2,8 +2,9 @@
 
 #include <string>
 #include "ANode.h"
+#include "Core\AGraph.h"
 
-class BinaryNode : ANode
+class BinaryNode : public ANode
 {
 public:
 	BinaryNode() : ANode() {}
@@ -11,7 +12,7 @@ public:
 	BinaryNode(const ANode &obj) : ANode(obj) {}
 
 	// Getter for ID
-	inline int GetID() { return ID; }
+	inline int GetID() const { return ID; }
 
 	// Setter for ID
 	inline void SetID(int id) { ID = id; }
@@ -21,4 +22,9 @@ public:
 
 	// Returns index-th bit
 	int GetBit(int index);
+
+	// Set value to index-th bit
+	// * value must be 0 or 1
+	void SetBit(int value, int index);
 };
+

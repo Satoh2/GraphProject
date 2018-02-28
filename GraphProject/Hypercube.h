@@ -1,11 +1,15 @@
 #pragma once
 
-#include "AGraph.h"
+#include "Core\AGraph.h"
 #include "BinaryNode.h"
 
 class Hypercube : public AGraph<BinaryNode>
 {
 public:
+	Hypercube() : AGraph() {}
+	Hypercube(int dim, int seed) : AGraph(dim, seed) {}
+	Hypercube(const Hypercube &obj) : AGraph(obj){}
+
 	// Returns degree of node
 	int GetDegree(BinaryNode node) { return Dimension; }
 

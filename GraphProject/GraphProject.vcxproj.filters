@@ -13,30 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Core">
+      <UniqueIdentifier>{d8ea6b73-3687-4e0e-b5f2-d31ced24dfc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Core">
+      <UniqueIdentifier>{812151e7-7fce-431e-a2c5-3cb789ab281d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Graphs">
+      <UniqueIdentifier>{30d652bb-4b26-4150-8915-4c7231ac6937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Graphs">
+      <UniqueIdentifier>{94f308bb-91c1-4b7d-82c0-c4f718840f44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="BinaryNode.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
     <ClCompile Include="Hypercube.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="CrossedCube.cpp">
+      <Filter>ソース ファイル\Graphs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AGraph.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ANode.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Hypercube.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
     <ClInclude Include="BinaryNode.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>ヘッダー ファイル\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Hypercube.h">
+      <Filter>ヘッダー ファイル\Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossedCube.h">
+      <Filter>ヘッダー ファイル\Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\AGraph.h">
+      <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

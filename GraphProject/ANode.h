@@ -11,7 +11,7 @@ public:
 	ANode(const ANode &obj) { ID = obj.ID; };
 
 	// Getter for ID
-	virtual int GetID() = 0;
+	virtual int GetID() const = 0;
 
 	// Setter for ID
 	virtual void SetID(int id) = 0;
