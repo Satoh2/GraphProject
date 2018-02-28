@@ -4,7 +4,7 @@
 #include <stack>
 #include <random>
 
-#include "..\ANode.h"
+#include "ANode.h"
 
 template <typename NodeType>
 class AGraph
@@ -30,19 +30,19 @@ public:
 	//
 
 	// Returns degree of node
-	virtual int GetDegree(NodeType node) = 0;
+	virtual int GetDegree(NodeType node) const = 0;
 
 	// Returns nodenum
-	virtual int GetNodeNum() = 0;
+	virtual int GetNodeNum() const = 0;
 
 	// Getter for Dimension
-	int GetDimension();
+	int GetDimension() const;
 
 	// Setter for Dimension
 	void SetDimension(int dim);
 
 	// Returns i-th neighbor of node
-	virtual NodeType GetNeighbor(NodeType node, int i) = 0;
+	virtual NodeType GetNeighbor(NodeType node, int i) const = 0;
 
 
 	//
@@ -95,7 +95,7 @@ AGraph<NodeType>::AGraph(const AGraph &obj)
 }
 
 template <typename NodeType>
-int AGraph<NodeType>::GetDimension() { return Dimension; }
+int AGraph<NodeType>::GetDimension() const { return Dimension; }
 
 template <typename NodeType>
 void AGraph<NodeType>::SetDimension(int dim) { Dimension = dim; }

@@ -118,19 +118,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryNode.cpp" />
-    <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="CrossedCube.cpp" />
-    <ClCompile Include="Hypercube.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Source\Core\BinaryNode.cpp" />
+    <ClCompile Include="Source\Core\AGraph.cpp" />
+    <ClCompile Include="Source\Core\ANode.cpp" />
+    <ClCompile Include="Source\Core\Debug.cpp" />
+    <ClCompile Include="Source\Graphs\CrossedCube.cpp" />
+    <ClCompile Include="Source\Graphs\Hypercube.cpp" />
+    <ClCompile Include="Source\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\AGraph.h" />
-    <ClInclude Include="ANode.h" />
-    <ClInclude Include="BinaryNode.h" />
-    <ClInclude Include="CrossedCube.h" />
-    <ClInclude Include="Debug.h" />
-    <ClInclude Include="Hypercube.h" />
+    <ClInclude Include="Source\Core\AGraph.h" />
+    <ClInclude Include="Source\Core\ANode.h" />
+    <ClInclude Include="Source\Core\BinaryNode.h" />
+    <ClInclude Include="Source\Graphs\CrossedCube.h" />
+    <ClInclude Include="Source\Core\Debug.h" />
+    <ClInclude Include="Source\Graphs\Hypercube.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

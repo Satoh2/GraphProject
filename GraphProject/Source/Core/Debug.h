@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "Core\AGraph.h"
+#include "AGraph.h"
 
 namespace DEBUG
 {

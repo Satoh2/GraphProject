@@ -1,18 +1,6 @@
 #include "CrossedCube.h"
 
-bool CrossedCube::DPPR(int u0, int u1, int v0, int v1, int sum)
-{
-	return (u0 == 1) && (v0 == 1) && ((u1 == v1) ^ (sum & 1)) // (1) or (2)
-		|| (u0 == 0) && (v0 == 0) && (u1 == v1);	// (3)
-
-	/* The above expression equals to the following.
-	return (u0 == 1) && (v0 == 1) && (u1 == v1) && ((sum & 1) == 0) // (1)
-		|| (u0 == 1) && (v0 == 1) && (u1 != v1) && ((sum & 1) == 1) // (2)
-		|| (u0 == 0) && (v0 == 0) && (u1 == v1);	// (3)
-	*/
-}
-
-bool CrossedCube::DPPR(BinaryNode node1, BinaryNode node2, int index, int sum)
+bool CrossedCube::DPPR(BinaryNode node1, BinaryNode node2, int index, int sum) const
 {
 	int u0 = node1.GetBit(index), u1 = node1.GetBit(index + 1);
 	int v0 = node2.GetBit(index), v1 = node2.GetBit(index + 1);
@@ -26,13 +14,13 @@ bool CrossedCube::DPPR(BinaryNode node1, BinaryNode node2, int index, int sum)
 	//|| (u0 == 0) && (v0 == 0) && (u1 == v1);	// (3)
 }
 
-BinaryNode CrossedCube::GetNeighbor(BinaryNode node, int i)
+BinaryNode CrossedCube::GetNeighbor(BinaryNode node, int i) const
 {
 	int mask = ((node.GetID() & 0x55555555 & ((1 << i) - 1)) << 1) | (1 << i);
 	return BinaryNode(node.GetID() ^ mask);
 }
 
-int CrossedCube::CalcDistance(BinaryNode node1, BinaryNode node2)
+int CrossedCube::CalcDistance(BinaryNode node1, BinaryNode node2) const
 {
 	int sum = 0;
 	for (int i = Dimension - (Dimension & 1); i >= 0; i -= 2)
@@ -41,7 +29,7 @@ int CrossedCube::CalcDistance(BinaryNode node1, BinaryNode node2)
 		{
 			sum = (node1.GetBit(i + 1) ^ node2.GetBit(i + 1)) + (node1.GetBit(i) ^ node2.GetBit(i));
 		}
-		else if (!DPPR(node1.GetBit(i), node1.GetBit(i + 1), node2.GetBit(i), node2.GetBit(i + 1), sum))
+		else if (!DPPR(node1, node2, i, sum))
 		{
 			sum++;
 		}
@@ -49,7 +37,7 @@ int CrossedCube::CalcDistance(BinaryNode node1, BinaryNode node2)
 	return sum;
 }
 
-void CrossedCube::CalcDistanceClassification(BinaryNode node1, BinaryNode node2, int* distanceArray)
+void CrossedCube::CalcDistanceClassification(BinaryNode node1, BinaryNode node2, int* distanceArray) const
 {
 	// “¯ˆê’¸“_‚È‚ç‚·‚×‚ÄŒã•û
 	if (node1.GetID() == node2.GetID())

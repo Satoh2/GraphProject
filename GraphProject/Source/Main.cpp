@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "BinaryNode.h"
-#include "Hypercube.h"
-#include "CrossedCube.h"
-#include "DEBUG.h"
+#include "Core\BinaryNode.h"
+#include "Core\DEBUG.h"
+#include "Graphs\Hypercube.h"
+#include "Graphs\CrossedCube.h"
 
 class A
 {

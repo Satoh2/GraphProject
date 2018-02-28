@@ -2,7 +2,7 @@
 
 #include <string>
 #include "ANode.h"
-#include "Core\AGraph.h"
+#include "AGraph.h"
 
 class BinaryNode : public ANode
 {

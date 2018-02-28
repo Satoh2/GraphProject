@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Core\AGraph.h"
-#include "BinaryNode.h"
+#include "..\Core\AGraph.h"
+#include "..\Core\BinaryNode.h"
 
 class Hypercube : public AGraph<BinaryNode>
 {
@@ -11,14 +11,14 @@ public:
 	Hypercube(const Hypercube &obj) : AGraph(obj){}
 
 	// Returns degree of node
-	int GetDegree(BinaryNode node) { return Dimension; }
+	int GetDegree(BinaryNode node) const { return Dimension; }
 
 	// Returns number of nodes
-	int GetNodeNum() { return 1 << Dimension; };
+	int GetNodeNum() const { return 1 << Dimension; };
 
 	// Returns i-th neighbor of node
-	BinaryNode GetNeighbor(BinaryNode node, int i);
+	BinaryNode GetNeighbor(BinaryNode node, int i) const;
 
 	// Calclations distance between node1 and node2
-	int CalcDistance(BinaryNode node1, BinaryNode node2);
+	int CalcDistance(BinaryNode node1, BinaryNode node2) const;
 };

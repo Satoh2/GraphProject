@@ -1,12 +1,12 @@
 #include "Hypercube.h"
 
-BinaryNode Hypercube::GetNeighbor(BinaryNode node, int i)
+BinaryNode Hypercube::GetNeighbor(BinaryNode node, int i) const
 {
 	BinaryNode neighbor(node.GetID() ^ (1 << i));
 	return neighbor;
 }
 
-int Hypercube::CalcDistance(BinaryNode node1, BinaryNode node2)
+int Hypercube::CalcDistance(BinaryNode node1, BinaryNode node2) const
 {
 	int bits = node1.GetID() ^ node2.GetID();
 	bits = (bits & 0x55555555) + (bits >> 1 & 0x55555555);

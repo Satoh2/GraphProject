@@ -27,40 +27,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="Source\Core\AGraph.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="BinaryNode.cpp">
+    <ClCompile Include="Source\Core\ANode.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\BinaryNode.cpp">
       <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Debug.cpp">
+    <ClCompile Include="Source\Core\Debug.cpp">
       <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Hypercube.cpp">
+    <ClCompile Include="Source\Graphs\CrossedCube.cpp">
       <Filter>ソース ファイル\Graphs</Filter>
     </ClCompile>
-    <ClCompile Include="CrossedCube.cpp">
+    <ClCompile Include="Source\Graphs\Hypercube.cpp">
       <Filter>ソース ファイル\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ANode.h">
+    <ClInclude Include="Source\Core\AGraph.h">
       <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
-    <ClInclude Include="BinaryNode.h">
+    <ClInclude Include="Source\Core\ANode.h">
+      <Filter>ヘッダー ファイル\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\BinaryNode.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Debug.h">
+    <ClInclude Include="Source\Core\Debug.h">
       <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Hypercube.h">
+    <ClInclude Include="Source\Graphs\CrossedCube.h">
       <Filter>ヘッダー ファイル\Graphs</Filter>
     </ClInclude>
-    <ClInclude Include="CrossedCube.h">
+    <ClInclude Include="Source\Graphs\Hypercube.h">
       <Filter>ヘッダー ファイル\Graphs</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\AGraph.h">
-      <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
