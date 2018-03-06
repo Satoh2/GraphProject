@@ -1,14 +1,26 @@
 #include "Hypercube.h"
 
-BinaryNode Hypercube::GetNeighbor(BinaryNode node, int i) const
+Hypercube::Hypercube() : AGraph() {}
+Hypercube::Hypercube(const Hypercube &obj) : AGraph(obj) {}
+
+int Hypercube::GetDegree(int node) const 
 {
-	BinaryNode neighbor(node.GetID() ^ (1 << i));
-	return neighbor;
+	return Dimension;
 }
 
-int Hypercube::CalcDistance(BinaryNode node1, BinaryNode node2) const
+int Hypercube::GetNodeNum() const 
+{ 
+	return 1 << Dimension;
+}
+
+int Hypercube::GetNeighbor(int node, int i) const
 {
-	int bits = node1.GetID() ^ node2.GetID();
+	return node ^ (1 << i);
+}
+
+int Hypercube::CalcDistance(int node1, int node2) const
+{
+	int bits = node1 ^ node2;
 	bits = (bits & 0x55555555) + (bits >> 1 & 0x55555555);
 	bits = (bits & 0x33333333) + (bits >> 2 & 0x33333333);
 	bits = (bits & 0x0f0f0f0f) + (bits >> 4 & 0x0f0f0f0f);
